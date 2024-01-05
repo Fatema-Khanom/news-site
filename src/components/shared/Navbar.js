@@ -8,7 +8,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Image from 'next/image';
 import logo from '@/assets/logo.png'
-import { IconButton } from '@mui/material';
+import { IconButton, Stack } from '@mui/material';
 //icons
 import FacebookIcon from '@mui/icons-material/Facebook';
 import Link from 'next/link';
@@ -28,7 +28,7 @@ function Navbar() {
   
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" className='bg-black'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
@@ -47,6 +47,11 @@ function Navbar() {
 
           <Box>
             
+          <Stack direction="row" sx={{
+            "& svg":{
+                color:"white",
+            }
+          }}>
           <IconButton>
                 <FacebookIcon></FacebookIcon>
           </IconButton>
@@ -59,6 +64,7 @@ function Navbar() {
           <IconButton>
                 <FacebookIcon></FacebookIcon>
           </IconButton>
+          </Stack>
           </Box>      
           
         </Toolbar>
