@@ -33,6 +33,21 @@ function Navbar() {
         <Toolbar disableGutters>
 
          <Image src={logo} width={100} height={100} alt="logo"></Image>
+{/*  */}
+         </Box> 
+            <Box className="w-full text-center" >
+            {navItems.map((item) => (
+              <Link key={item} href={item.pathname}>
+               <Button className="text-white">
+                {item.route}
+               </Button>
+              </Link>
+            ))}
+          </Box> 
+          <Typography variant="body2" color="gray" textAlign="center">
+            @2023 The Dragon News. Design by Fatema Urmi
+          </Typography>
+          {/*  */}
           
           
           <Box className="w-full text-center" >
